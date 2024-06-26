@@ -33,7 +33,7 @@ namespace Y9_DEC_TO_BIN_SKELETON
                 result = x.ToString();
             } while (number != 0 & numberbase != 0);
 
-                return result; //REMOVE THE RED LINE!
+                return result; //REMOVE THE RED LINE!sS
         }
     }
 }
