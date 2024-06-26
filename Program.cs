@@ -10,23 +10,30 @@ namespace Y9_DEC_TO_BIN_SKELETON
     {
         static void Main(string[] args)
         {
-            //STARTER: Practice using breakpoints and the watch window (F8 to single-step, F11 to start in single step mode)
-            int myInt = 0; //just for testing single stepping
-            string myString = "12"; //watch me being cast from string to int
-            int myStringAsInt = Convert.ToInt32(myString); //watch me cast from string to int
-
             //MAIN:  NUMBER CONVERSION PROGRAM
 
-            //CODE GOES HERE
+            Console.WriteLine( "Please enter your number:" );
+            int userNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter the numberbase you want converting to:");
+            int userNumBase = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(numberConversion(userNum, userNumBase)); ;
         }
 
         //static void means the function will not return a value so it does not need a data type 
         //...this function DOES return a value so the method must have a data type
         static string numberConversion(int number, int numberbase)
         {
-            //CODE GOES HERE
+            string result = "";
+            int x = 0;
+            do
+            {
+                x = x * 10;
+                x = (number % numberbase) + x;
+                number = number / numberbase;
+                result = x.ToString();
+            } while (number != 0 & numberbase != 0);
 
-            return result; //REMOVE THE RED LINE!
+                return result; //REMOVE THE RED LINE!
         }
     }
 }
