@@ -24,16 +24,14 @@ namespace Y9_DEC_TO_BIN_SKELETON
         static string numberConversion(int number, int numberbase)
         {
             string result = "";
-            int x = 0;
             do
             {
-                x = x * 10;
-                x = (number % numberbase) + x;
+                result = Convert.ToString(number % numberbase) + Convert.ToString(result);
                 number = number / numberbase;
-                result = x.ToString();
             } while (number != 0 & numberbase != 0);
 
-                return result; //REMOVE THE RED LINE!sS
+                return result; //REMOVE THE RED LINE!
+
         }
     }
 }
