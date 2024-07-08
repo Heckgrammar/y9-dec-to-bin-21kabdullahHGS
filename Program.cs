@@ -15,15 +15,21 @@ namespace Y9_DEC_TO_BIN_SKELETON
             //MAIN:  NUMBER CONVERSION PROGRAM 
 
 
+            int userNum = -1;
+            int userNumBase = -1;
+            while (userNum <= -1)
+            {
+                Console.WriteLine("Please enter your number  (0 to 2147483647):");
 
-            Console.WriteLine("Please enter your number  (0 to 2147483647):");
+                userNum = Convert.ToInt32(Console.ReadLine());
+            }
+            while (userNumBase <= -1 || userNumBase > 36)
+            {
 
-            int userNum = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Please enter the numberbase you want converting to (2 to 36):");
 
-            Console.WriteLine("Please enter the numberbase you want converting to (2 to 36):");
-
-            int userNumBase = Convert.ToInt32(Console.ReadLine());
-
+                userNumBase = Convert.ToInt32(Console.ReadLine());
+            }
             Console.WriteLine(numberConversion(userNum, userNumBase)); ;
 
         }
