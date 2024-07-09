@@ -11,27 +11,44 @@ namespace Y9_DEC_TO_BIN_SKELETON
         static void Main(string[] args)
 
         {
-
-            //MAIN:  NUMBER CONVERSION PROGRAM 
-
-
             int userNum = -1;
             int userNumBase = -1;
-            while (userNum <= -1)
+            int userNumNumBase = 0;
+            while (userNumNumBase != 2 & userNumNumBase != 10)
             {
-                Console.WriteLine("Please enter your number  (0 to 2147483647):");
-
-                userNum = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("What numberbase is your number?");
+                userNumNumBase = Convert.ToInt32(Console.ReadLine());
             }
-            while (userNumBase <= -1 || userNumBase > 36)
+            if (userNumNumBase == 10)
             {
+                
+                while (userNum <= -1)
+                {
+                    Console.WriteLine("Please enter your number  (0 to 2147483647):");
 
-                Console.WriteLine("Please enter the numberbase you want converting to (2 to 36):");
+                    userNum = Convert.ToInt32(Console.ReadLine());
+                }
+                while (userNumBase <= -1 || userNumBase > 36)
+                {
 
-                userNumBase = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Please enter the numberbase you want converting to (2 to 36):");
+
+                    userNumBase = Convert.ToInt32(Console.ReadLine());
+                }
+                Console.WriteLine(numberConversion(userNum, userNumBase)); ;
+
             }
-            Console.WriteLine(numberConversion(userNum, userNumBase)); ;
+            else if (userNumNumBase == 2) {
+                while (userNum <= -1)
+                {
+                    Console.WriteLine("Please enter your number  (0 to 2147483647):");
 
+                    userNum = Convert.ToInt32(Console.ReadLine());
+                }
+
+
+
+            }
         }
 
 
@@ -39,7 +56,14 @@ namespace Y9_DEC_TO_BIN_SKELETON
         //static void means the function will not return a value so it does not need a data type  
 
         //...this function DOES return a value so the method must have a data types 
+        static string BinarytoDenaryConversion(int number) {
+            string userNumDenary = "";
 
+            for (int i = 0;i < 10; i++) ;
+
+            return userNumDenary;
+        } 
+        
         static string numberConversion(int number, int numberbase)
 
         {
